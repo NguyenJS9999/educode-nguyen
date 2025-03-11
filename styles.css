@@ -1,0 +1,17 @@
+/*  root css */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+    --main-color: #fff;
+	--white: #ffffff;
+	--back: #000,
+}
+
+.dad-home-page {
+	padding: 1.8rem 3rem;
+	min-height: 100vh;
+}

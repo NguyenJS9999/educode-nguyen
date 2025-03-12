@@ -112,21 +112,23 @@
 	gap: 1rem;
 }
 .product-card-item {
-	/* border: 1px solid red; */
-	border-radius: 16px;
-	border: 1px solid #bfc8e5;
-	background: #fbfcff;
 	box-shadow: 0px 8px 23px 0px rgba(218, 224, 249, 0.7);
+	border: 1px solid transparent;
+	border-radius: 16px;
+	background: #fbfcff;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 24px;
 	gap: 16px;
+	/* border: 1px solid red; */
 }
 .product-card-item:hover {
-	opacity: 0.8;
+	box-shadow: 0px 8px 23px 0px rgba(218, 224, 249, 0.7);
+	background: #fbfcff;
 	cursor: pointer;
+	border: 1px solid #bfc8e5;
 }
 .product-card-item-img {
 	border-radius: 97px;
@@ -171,8 +173,11 @@
 	padding: 2px 8px;
 	border-radius: 10px;
 
-
 	font-family: Poppins;
 	font-size: 12px;
 	font-weight: 500;
+	cursor: default;
 }
+/* .product-card-item-tags__item:hover {
+	opacity: 0.8;
+} */

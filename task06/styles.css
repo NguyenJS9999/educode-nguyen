@@ -1,0 +1,24 @@
+.continer {
+	display: flex;
+	width: 100%;
+}
+.collections-page {
+	width: 100%;
+	background-color: rgba(6, 27, 82, 0.1);
+	min-height: 100vh;
+	padding: 4rem;
+}
+.collections-page__title {
+	color: rgba(14, 14, 56, 1);
+	font-family: Merriweather;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 100%;
+}
+.collections-page__filters {
+    display: flex;
+    gap: 0.5rem;
+}
+.collections-page__filter-item {
+    
+}

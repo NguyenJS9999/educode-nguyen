@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task03</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font gooogle Mulish -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Font gooogle Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font gooogle Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="product-card-page">
+        <div class="product-card-page-title">Users</div>
+
+        <div class="product-card-page-header">
+            <div class="product-card-page-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search users">
+            </div>
+            <div class="product-card-page-action">
+                <div class="product-card-page-nav">
+                    <a href="" class="product-card-page-nav-item">Reputation</a>
+                    <a href="" class="product-card-page-nav-item">New users</a>
+                    <a href="" class="product-card-page-nav-item">Voters</a>
+                    <a href="" class="product-card-page-nav-item">Editors</a>
+                    <a href="" class="product-card-page-nav-item">Moderators</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-list">
+            <div id="product-list" class="product-list-wrap">
+
+                <!-- <a href="" class="product-card-item">
+                    <div class="product-card-item-img">
+                        <img src="./images/image(1).png" alt="avata">
+                    </div>
+
+                    <div class="product-card-item-infos">
+                        <div class="product-card-item_title">Lelah Nichols </div>
+                        <div class="product-card-item-description">Troy, MI </div>
+                        <div class="product-card-item-tags">
+                            <div class="product-card-item-tags__item">
+                                clothes
+                            </div>
+                            <div class="product-card-item-tags__item">
+                                stem
+                            </div>
+
+                        </div>
+                    </div>
+                </a> -->
+                <!--  -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script src="./script"></script> -->
+    <script>
+        const productList = [
+            {
+                id: 1,
+                avata: "image(1).png",
+                title: "Lelah Nichols",
+                description: "Troy, MI",
+                tag: ["Maintenance","frames","gears","repair",],
+            },
+            {
+                id: 2,
+                avata: "image(2).png",
+                title: "Jesus Weiss",
+                description: "Fort Worth, TX",
+                tag: ["headset","gadget","speed","winter",],
+            },
+            {
+                id: 3,
+                avata: "image(3).png",
+                title: "Annie Rice",
+                description: "Austin, TX",
+                tag: ["road","earth","mountain","trip","nature",],
+
+            },
+            {
+                id: 4,
+                avata: "image(4).png",
+                title: "Robert Brower",
+                description: "Cincinnati, OH",
+                tag: ["Maintenance","frames","gears","repair",],
+            },
+            {
+                id: 5,
+                avata: "image(5).png",
+                title: "Amy Campbell",
+                description: "Warrior, AL",
+                tag: ["music","disks","Anthony S. Morin","Lyndhurst, NJ","vintage",],
+            },
+            {
+                id: 6,
+                avata: "image(6).png",
+                title: "Anthony S. Morin",
+                description: "Lyndhurst, NJ",
+                tag: ["vintage","electric",],
+            },
+        ]
+        const productListElement = document.getElementById('product-list');
+        productListElement.innerHTML = Array.isArray(productList) ?
+
+        productList.map(item => `
+            <a href="#" class="product-card-item">
+                <div class="product-card-item-img">
+                    <img src="./images/${item?.avata}" alt="avatar" />
+                </div>
+
+                <div class="product-card-item-infos">
+                    <div class="product-card-item-title">${item?.title}</div>
+                    <div class="product-card-item-description">${item?.description}</div>
+                    <div class="product-card-item-tags">
+                        ${Array.isArray(item?.tag) && item?.tag.length ?
+                            item.tag.map(tag => `
+                                <div class="product-card-item-tags__item">${tag}</div>
+                            `).join("")
+                            : ""
+                        }
+                    </div>
+                </div>
+            </a>
+        `).join("")
+        : "No products!";
+
+    </script>
+
+</body>
+
+</html>

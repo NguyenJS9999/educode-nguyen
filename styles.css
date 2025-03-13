@@ -8,10 +8,86 @@
 :root {
     --main-color: #fff;
 	--white: #ffffff;
-	--back: #000,
+	--back: #000;
+	--color-text: #fff;
+	--back-btn-default: aliceblue;
 }
 
 .dad-home-page {
 	padding: 1.8rem 3rem;
 	min-height: 100vh;
+}
+
+/* Customs */
+
+.btn {
+	transition: all 0.3s ease;
+	user-select: none;
+	word-break: break-all;
+	white-space: nowrap
+}
+.btn:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.w-100 {
+	width: 100%;
+}
+.d-flex {
+	display: flex;
+}
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+.gap-1 {
+	gap: 0.25rem
+}
+.gap-2 {
+	gap: 0.5rem
+}
+.gap-4 {
+	gap: 1rem
+}
+.gap-1 {
+	gap: 0.25rem
+}
+.align-center {
+	align-items: center;
+}
+.mt-2 {
+	margin-top: 0.5rem;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.justify-around {
+	justify-content: space-around;
+}
+.justify-evenly {
+	justify-content: space-evenly;
+}
+.justify-stretch {
+	justify-content: stretch;
+}
+.justify-baseline {
+	justify-content: baseline;
+}
+.justify-normal {
+	justify-content: normal;
 }

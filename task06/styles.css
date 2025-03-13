@@ -1,4 +1,4 @@
-.continer {
+.container {
 	display: flex;
 	width: 100%;
 }
@@ -20,5 +20,5 @@
     gap: 0.5rem;
 }
 .collections-page__filter-item {
-    
+
 }

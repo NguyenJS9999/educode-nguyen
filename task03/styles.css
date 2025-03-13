@@ -81,7 +81,7 @@
 	font-family: Roboto;
 	font-size: 18px;
 	font-weight: 400;
-	text-decoration-line: strikethrough;
+	text-decoration: line-through;
 }
 
 #discounted-price {
@@ -149,12 +149,16 @@
 	line-height: normal;
 }
 
+.product-detail-page .btn {
+	border: 1px solid gray;
+}
+
 @media (max-width: 576px) {
 
 }
 
 @media (max-width: 768px) {
-	
+
 }
 
 @media (max-width: 992px) {

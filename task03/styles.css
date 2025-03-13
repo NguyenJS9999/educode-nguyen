@@ -10,7 +10,7 @@
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
-	align-items: stretch;
+	/* align-items: stretch; */
 	padding: 2% 4%;
 
 	font-style: normal;
@@ -23,7 +23,7 @@
 	margin-top: 4%;
 	box-shadow: 0px 24px 28px 9px rgba(179, 193, 217, 0.33);
 	border-radius: 1rem;
-
+	height: fit-content;
 	background: #fff;
 	flex-shrink: 0;
 	width: 100%;

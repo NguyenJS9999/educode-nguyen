@@ -1,0 +1,178 @@
+.container {
+	max-width: 1440px;
+	margin: auto;
+}
+
+#lol-landing-page {
+	min-height: 100vh;
+	font-style: normal;
+	line-height: normal;
+	font-family: 'Roboto', sans-serif;
+	pad: 2rem 0;
+}
+
+#lol-landing-page img {
+	width: 100%;
+}
+#lol-logo {
+	margin-top: 2rem;
+}
+#lol-logo img {
+	width: 240px;
+	height: 106px;
+}
+#lol-categories {
+	margin-top: 2rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.category-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.category-item a {
+	text-emphasis: none;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+#lol-list-item {
+	margin-top: 4rem;
+	/* border: 1px solid red; */
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.lol-item-product {
+	display: flex;
+	flex-direction: column;
+}
+.lol-item-product__img {
+	min-height: 370px;
+	position: relative;
+	overflow: hidden;
+	background: #f0f0f0;
+}
+.lol-item-product__img > img {
+	/* width: auto; */
+	height: 100%;
+	/* Ảnh ko méo */
+	object-fit: cover;
+}
+.lol-item-product__title {
+	background: #0e4c67;
+	color: #fff;
+
+	font-size: 20px;
+	font-weight: 700;
+	width: 100%;
+	padding: 1.75rem 0;
+}
+
+#lol-media {
+	margin-top: 4rem;
+}
+#lol-media video,
+#lol-media iframe {
+	width: 100%;
+}
+
+.responsive-iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border: 0;
+}
+
+#lol-footer {
+	margin-top: 2rem;
+	background: #0e4c67;
+	padding: 2rem;
+	max-height: 100px;
+	display: flex;
+	flex-shrink: 0;
+}
+.rights-reserved {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#contact-with-auth input {
+	border: 2px solid #ffa800;
+	border-radius: 2px;
+	flex-shrink: 0;
+	padding: 16px 24px;
+	background: transparent;
+}
+#contact-with-auth input::placeholder {
+	color: #fff;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: #fff;
+	font-family: 'Montserrat';
+	font-size: 16px;
+	font-weight: 400;
+}
+#contact-with-auth span {
+	color: #fff;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	font-family: 'Merriweather', serif;
+}
+
+#contact-with-auth button {
+	border: none;
+	border-radius: 5px;
+	background: #ffa800;
+	padding: 1rem;
+}
+
+.input-custom:visited {
+	outline: none;
+	border: none;
+}
+
+.input-custom:focus-visible {
+	border: 1px solid var(--bfc-8-e-6, #bfc8e5);
+}
+
+.input-custom:focus {
+	border: 1px solid var(--bfc-8-e-6, #bfc8e5);
+}
+
+@media (max-width: 576px) {
+	#lol-list-item {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media (min-width: 576px) {
+	#lol-list-item {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 768px) {
+	#lol-list-item {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 992px) {
+	#lol-list-item {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (min-width: 1200px) {
+
+}

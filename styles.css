@@ -6,7 +6,7 @@
 }
 
 :root {
-    --main-color: #fff;
+	--main-color: #fff;
 	--white: #ffffff;
 	--back: #000;
 	--color-text: #fff;
@@ -24,11 +24,28 @@
 	transition: all 0.3s ease;
 	user-select: none;
 	word-break: break-all;
-	white-space: nowrap
+	white-space: nowrap;
 }
 .btn:hover {
 	cursor: pointer;
 	opacity: 0.8;
+}
+
+input::-webkit-input-placeholder,
+input:-moz-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder {
+	outline: none;
+	border: none;
+	border: 1px solid var(--bfc-8-e-6, #bfc8e5);
+}
+
+input:visited {
+	outline: none;
+	border: none;
+}
+input:focus-visible {
+	border: 1px solid var(--bfc-8-e-6, #bfc8e5);
 }
 
 .w-100 {
@@ -42,24 +59,28 @@
 	flex-direction: column;
 }
 .gap-1 {
-	gap: 0.25rem
+	gap: 0.25rem;
 }
 .gap-2 {
-	gap: 0.5rem
+	gap: 0.5rem;
 }
 .gap-4 {
-	gap: 1rem
+	gap: 1rem;
 }
-.gap-1 {
-	gap: 0.25rem
-}
+
 .align-center {
 	align-items: center;
+}
+
+.mt-1 {
+	margin-top: 0.25rem;
 }
 .mt-2 {
 	margin-top: 0.5rem;
 }
-
+.mt-4 {
+	margin-top: 1rem;
+}
 .justify-center {
 	justify-content: center;
 }

@@ -1,10 +1,11 @@
+<!-- Task 06: Popular Collections -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task03</title>
+    <title>Task 06: Popular Collections</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../styles.css">
 
@@ -26,7 +27,7 @@
         href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <!-- Font gooogle Poppins -->
+    <!-- Font gooogle Merriweather -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -39,17 +40,83 @@
 
     <div class="container">
         <div class="collections-page">
-            <div class="collections-page__title">Popular Collections</div>
+            <div class="collections-page__title">Popular Collections</div>`
+            <div id="collections-filters" class="collections-page__filters d-flex gap-2">
+                <a href="" class="collections-page__filter-item btn">Profile</a>
+                <a href="" class="collections-page__filter-item btn">New York</a>
+                <a href="" class="collections-page__filter-item btn">Relaxing</a>
+                <a href="" class="collections-page__filter-item btn">Person</a>
+                <a href="" class="collections-page__filter-item btn">Fashion</a>
+            </div>
 
-            <ul class="collections-page__filters">
-                <li><a href="" class="collections-page__filter-item">Profile</a></li>
-                <li><a href="" class="collections-page__filter-item">New York</a></li>
-                <li><a href="" class="collections-page__filter-item">Relaxing</a></li>
-                <li><a href="" class="collections-page__filter-item">Person</a></li>
-                <li><a href="" class="collections-page__filter-item">Fashion</a></li>
-            </ul>
+            <div id="collections-list">
 
-            <div></div>
+                <div class="collections-item btn">
+                    <div class="collections-item-wrap">
+                        <img src="./images/1.png" alt="collection" class="w-full">
+
+                        <div class="collections-item__imgs-sub">
+                            <img src="./images/1.1.png" alt="collection">
+                            <img src="./images/1.2.png" alt="collection">
+                            <img src="./images/1.3.png" alt="collection">
+                        </div>
+
+                        <div class="collections-infors  d-flex justify-between gap-2 ">
+                            <span>People</span>
+
+                            <div class="d-flex align-center gap-1">
+                                <i class="fa-regular fa-image"></i>
+                                <span class="quantity">144</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="collections-item btn">
+                    <div class="collections-item-wrap">
+                        <img src="./images/2.png" alt="collection" class="w-full">
+
+                        <div class="collections-item__imgs-sub">
+                            <img src="./images/2.1.png" alt="collection">
+                            <img src="./images/2.2.png" alt="collection">
+                            <img src="./images/2.3.png" alt="collection">
+                        </div>
+
+                        <div class="collections-infors  d-flex justify-between gap-2 ">
+                            <span>People</span>
+
+                            <div class="d-flex align-center gap-1">
+                                <i class="fa-regular fa-image"></i>
+                                <span class="quantity">7k</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="collections-item btn">
+                    <div class="collections-item-wrap">
+                        <img src="./images/3.png" alt="collection" class="w-full">
+
+                        <div class="collections-item__imgs-sub">
+                            <img src="./images/3.1.png" alt="collection">
+                            <img src="./images/3.2.png" alt="collection">
+                            <img src="./images/3.3.png" alt="collection">
+                        </div>
+
+                        <div class="collections-infors  d-flex justify-between gap-2 ">
+                            <span>People</span>
+
+                            <div class="d-flex align-center gap-1">
+                                <i class="fa-regular fa-image"></i>
+                                <span class="quantity">413</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </div>

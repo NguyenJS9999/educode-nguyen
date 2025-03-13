@@ -13,13 +13,16 @@
 	--back-btn-default: aliceblue;
 }
 
+a {
+	text-decoration: none;
+}
+
 .dad-home-page {
 	padding: 1.8rem 3rem;
 	min-height: 100vh;
 }
 
 /* Customs */
-
 .btn {
 	transition: all 0.3s ease;
 	user-select: none;
@@ -48,7 +51,8 @@ input:focus-visible {
 	border: 1px solid var(--bfc-8-e-6, #bfc8e5);
 }
 
-.w-100 {
+
+.w-100, .w-full {
 	width: 100%;
 }
 .d-flex {

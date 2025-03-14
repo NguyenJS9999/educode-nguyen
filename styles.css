@@ -51,9 +51,30 @@ input:focus-visible {
 	border: 1px solid var(--bfc-8-e-6, #bfc8e5);
 }
 
-
-.w-100, .w-full {
+/* Again */
+.container {
 	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px; /* Thêm padding để tránh dính lề */
+}
+
+/* Điểm ngắt theo kích thước màn hình */
+@media (max-width: 576px) { .container {max-width: 100%;}}
+@media (min-width: 576px) { .container {max-width: 540px;}}
+@media (min-width: 768px) { .container {max-width: 720px;}}
+@media (min-width: 992px) { .container {max-width: 960px;}}
+@media (min-width: 1200px) { .container {max-width: 1140px;}}
+@media (min-width: 1400px) { .container {max-width: 1320px;}}
+.w-fit {
+	width: fit-content;
+}
+.w-100,
+.w-full {
+	width: 100%;
+}
+.h-fit {
+	height: fit-content;
 }
 .d-flex {
 	display: flex;
@@ -85,6 +106,77 @@ input:focus-visible {
 .mt-4 {
 	margin-top: 1rem;
 }
+
+.mb-1 {
+	margin-bottom: 0.25rem;
+}
+.mb-2 {
+	margin-bottom: 0.5rem;
+}
+.mb-4 {
+	margin-bottom: 1rem;
+}
+
+.mr-1 {
+	margin-right: 0.25rem;
+}
+.mr-2 {
+	margin-right: 0.5rem;
+}
+.mr-4 {
+	margin-right: 1rem;
+}
+
+.ml-1 {
+	margin-left: 0.25rem;
+}
+.ml-2 {
+	margin-left: 0.5rem;
+}
+.ml-4 {
+	margin-left: 1rem;
+}
+
+.pt-1 {
+	padding-top: 0.25rem;
+}
+.pt-2 {
+	padding-top: 0.5rem;
+}
+.pt-4 {
+	padding-top: 1rem;
+}
+
+.pb-1 {
+	padding-bottom: 0.25rem;
+}
+.pb-2 {
+	padding-bottom: 0.5rem;
+}
+.pb-4 {
+	padding-bottom: 1rem;
+}
+
+.pr-1 {
+	padding-right: 0.25rem;
+}
+.pr-2 {
+	padding-right: 0.5rem;
+}
+.pr-4 {
+	padding-right: 1rem;
+}
+
+.pl-1 {
+	padding-left: 0.25rem;
+}
+.pl-2 {
+	padding-left: 0.5rem;
+}
+.pl-4 {
+	padding-left: 1rem;
+}
+/* padding */
 .justify-center {
 	justify-content: center;
 }

@@ -1,0 +1,3 @@
+@function rem($pixel) {
+    @return ($pixel / 16) + rem; // Giả định font size mặc định là 16px
+  }

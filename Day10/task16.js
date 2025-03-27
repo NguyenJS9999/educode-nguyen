@@ -24,30 +24,38 @@ let resultElement = document.getElementById('result');
 const km = parseFloat(prompt('Task 16: Nhập vào số km cần tính tiền taxi: '));
 
 function taxiBill() {
-	if (!km || Number(km <= 0) || isNaN(km)) {
+	if (isNaN(km) || km <= 0) {
 		console.log(`Số km không hợp lệ`);
-		resultElement.textContent = `Số km không hợp lệ`;
+		if (resultElement) resultElement.textContent = `Số km không hợp lệ`;
+        return;
 	}
 
 	const step1 = 10000;
 	const step2 = 8000;
-	const step3 = 8000;
+	const step3 = 7000;
     let note = '';
+    let step = '';
+	let totalMoney = 0;
 	if (km) {
-		let totalMoney = 0;
 		if (km <= 1) {
-			totalMoney = 1 * step1;
-            note = `1 ${step1} - vnđ/1km`;
+			totalMoney = step1;
+			
+			step = 1;
+            note = `${step} tức là bắt đầu từ Số km <= 1 giá: ${step1}đ/km. (giá mở cửa 10.000đ) `;
 		} else if (km <= 30) { // 29
 			totalMoney = step1 + (km - 1) * step2;
-            note = `2 ${step2} - vnđ/1km`;
+
+			step = 2;
+			note = `${step} Số km > 1 đến <= 30 giá: ${step2}đ/km`;
 		} else {
-			totalMoney = step1 + (km - 1) * step3;
-            note = `3 ${step3} - vnđ/1km`;
+			totalMoney = step1 + (29 * step2) + ((km - 30) * step3); //
+
+			step = 3;
+			note = `${step} Số km từ > 30 giá: ${step3}đ/km.`;
 		}
 
 		console.log(
-			`Số tiền cần trả của ${km} tính theo bậc ${note}: `,
+			`Số tiền cần trả của ${km} km đạt lũy giảm bậc ${note}: `,
 			totalMoney.toLocaleString('vi-VN', {
 				style: 'currency',
 				currency: 'VND'
@@ -60,7 +68,7 @@ function taxiBill() {
 				currency: 'VND'
 			});
 			resultElement.textContent = `
-                Số tiền cần trả của ${km} tính theo bậc ${note}:${convert}
+                Số tiền cần trả của ${km} km đạt lũy giảm bậc ${note}:${convert}
             `;
 		}
 	}

@@ -39,7 +39,7 @@ function taxiBill() {
 	if (km) {
 		if (km <= 1) {
 			totalMoney = step1;
-			
+
 			step = 1;
             note = `${step} tức là bắt đầu từ Số km <= 1 giá: ${step1}đ/km. (giá mở cửa 10.000đ) `;
 		} else if (km <= 30) { // 29
@@ -75,6 +75,8 @@ function taxiBill() {
 }
 
 taxiBill();
+
+
 
 // taxiBill(0.1); // Output: Số tiền cần trả: 10000đ
 // taxiBill(1); // Output: Số tiền cần trả: 10000đ

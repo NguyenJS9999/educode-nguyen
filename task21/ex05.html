@@ -45,13 +45,28 @@
     <div class="dad-home-page">
         <ol>
             <br>
-            <h5>Task 21 Ví dụ 4: Cho trước mảng chứa các số nguyên, viết hàm tìm</h5>
-            <p>
-                Cho trước mảng chứa các số nguyên, viết hàm tìm:
-                Tìm số lớn nhất trong mảng và vị trí của nó (Nếu có 2 số bằng nhau, lấy số đầu tiên tìm được).
-                Tìm số nhỏ nhất trong mảng và vị trí của nó (Nếu có 2 số bằng nhau, lấy số đầu tiên tìm được).
-                Tính trung bình cộng các số nguyên tố trong mảng, nếu mảng không có số nguyên tố nào, trả về null.
-            </p>
+            <h2>Viết hàm chèn số vào mảng mà không thay đổi thứ tự tăng dần của mảng.</h2>
+            <ul>
+                <li>Cho trước một mảng chưa được sắp xếp.</li>
+                <li>Hãy sắp xếp lại mảng theo thứ tự tăng dần và loại bỏ toàn bộ giá trị không phải là số hoặc là NaN
+                    của mảng.</li>
+                <li>Viết hàm <code>insertNumber(arr, num)</code> để chèn số <code>num</code> vào mảng <code>arr</code>
+                    mà không làm thay đổi thứ tự tăng dần của mảng.</li>
+            </ul>
+
+            <pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">insertNumber</span>(<span class="hljs-params">arr, num</span>) </span>{
+                <span class="hljs-comment">// Xử lý và in ra kết quả</span>
+              }
+
+              <span class="hljs-comment">// Test</span>
+
+              insertNumber([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>], <span class="hljs-number">6</span>); <span class="hljs-comment">// Output: [1, 3, 5, 6, 7, 9]</span>
+              insertNumber([<span class="hljs-number">3</span>, <span class="hljs-string">"hello"</span>, <span class="hljs-number">1</span>, NaN, <span class="hljs-number">4</span>, <span class="hljs-literal">null</span>], <span class="hljs-number">2</span>); <span class="hljs-comment">// Output: [1, 2, 3, 4]</span>
+              insertNumber([], <span class="hljs-number">5</span>); <span class="hljs-comment">// Output: [5]</span>
+              insertNumber([<span class="hljs-number">-1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">-5</span>, <span class="hljs-string">"abc"</span>], <span class="hljs-number">-3</span>); <span class="hljs-comment">// Output: [-5, -3, -1, 10]</span>
+              insertNumber([<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>], NaN); <span class="hljs-comment">// Output: [2, 5, 8]</span>
+              </div></code></pre>
+
             <p id="result4"></p>
 
 
@@ -59,7 +74,7 @@
     </div>
 
 
-    <script src="./ex04.js"></script>
+    <script src="./ex05.js"></script>
 
 </body>
 

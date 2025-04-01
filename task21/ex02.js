@@ -18,25 +18,31 @@ filterEvenNumbers([]) ; // Output: []
 filterEvenNumbers([-2, -1, 0, 1, 2]) ; // Output: [-2, 0, 2]
 
 */
-console.log(`-------------------------------------------------------`);
-console.log('Ví dụ 2: Viết hàm lọc lấy các số chẵn của một mảng');
 const Vd2htmlOut = [];
 function filterEvenNumbers(arr) {
-	const evenNumberArr = [];
+	console.log(`Mảng ban đầu cần lọc các số chắn: `, !arr ? `Thiếu đầu vào`: arr);
+	Vd2htmlOut.push(`<div>Mảng ban đầu cần lọc các số chắn [${arr}]</div>`)
+
+	let evenNumberArr = [];
 	if (arr) {
 		for (let i = 0; i < arr.length; i++) {
+			Vd2htmlOut.push(`<div></div>`)
 			if (arr.length <= 0) {
 				return [];
 			}
 			if (arr[i] % 2 === 0) {
 				evenNumberArr.push(arr[i]);
 			}
+
 		}
 		console.log(
-			`Mảng mới sau khi lọc lấy các số chẵn của một mảng ban đầu: ' [ ${evenNumberArr} ]`
+			`Mảng mới sau khi lọc lấy các số chẵn của một mảng ban đầu: ' [${evenNumberArr}]`
 		);
+		console.log(`-------------------------------------------------------`);
 
-		Vd2htmlOut.push(`[${evenNumberArr}]`);
+		Vd2htmlOut.push(`Mảng sau khi lọc: [ ${evenNumberArr} ] <br> `);
+		Vd2htmlOut.push(`<br>`);
+
 		return evenNumberArr;
 	} else {
 		resultElement1.innerHTML = `Đầu vào ko hợp lệ`;

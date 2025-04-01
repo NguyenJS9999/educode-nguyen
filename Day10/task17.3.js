@@ -111,7 +111,7 @@ function taxableRange_2(salary) {
 		let taxableIncome = Math.min(salary, milestone_2) - milestone_1;
 		return taxableIncome * 0.05;
 	}
-	
+
 	return 0;
 }
 
@@ -121,7 +121,7 @@ function taxableRange_3(salary) {
 		let taxableIncome = Math.min(salary, milestone_3) - milestone_2;
 		return taxableIncome * 0.1;
 	}
-	
+
 	return 0;
 }
 
@@ -131,7 +131,7 @@ function taxableRange_4(salary) {
 		let taxableIncome = Math.min(salary, milestone_4) - milestone_3;
 		return taxableIncome * 0.2;
 	}
-	
+
 	return 0;
 }
 
@@ -141,7 +141,7 @@ function taxableRange_5(salary) {
 		let taxableIncome = salary - milestone_4;
 		return taxableIncome * 0.3;
 	}
-	
+
 	return 0;
 }
 

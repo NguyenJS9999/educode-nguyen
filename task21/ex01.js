@@ -26,8 +26,15 @@ function cleanFalsyValues(arr) {
 			cleanArr.push(arr[i]);
 		}
 	}
-	console.log('Mảng arr và loại bỏ các giá trị falsy: ', cleanArr);
-	resultElement1.innerHTML = `<p>Mảng arr và loại bỏ các giá trị falsy: ' [ ${cleanArr} ]</p>`;
+	console.log('Mảng arr đã loại bỏ các giá trị falsy: ', cleanArr);
+	resultElement1.innerHTML = `
+	<div>
+		<span>Mảng arr và loại bỏ các giá trị falsy:
+		<span>[</span>
+		<span>${cleanArr}</span>
+		<span>]</span>
+	</div>
+	`;
 }
 
 // Test

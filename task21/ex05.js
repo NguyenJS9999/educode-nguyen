@@ -19,21 +19,19 @@ insertNumber([-1, 10, -5, "abc"], -3); // Output: [-5, -3, -1, 10]
 insertNumber([5, 2, 8], NaN); // Output: [2, 5, 8]
 */
 
+
 function insertNumber(array, num) {
 	console.log('1 - Đầu vào của mảng cần thêm: ', array);
-	console.log('2 - Một ký tự bất kì muốn thêm vào mảng trên: ', num);
+	// console.log('2 - Một ký tự bất kì muốn thêm vào mảng trên: ', num);
 	if (!Array.isArray(array)) {
 		console.log('Lỗi: Đầu vào phải là một mảng.');
 		return;
 	}
 
-	// if (typeof num !== 'number' || isNaN(num)) {
-	// 	console.log('Lỗi: Giá trị thêm vào phải là một số hợp lệ.');
-	// }
 
 	// Thêm kí tự bất kì vào mảng
 	array.push(num);
-	console.log('3 - Mảng cũ sau khi thêm một giá trị số mới vào cuối: ', array);
+	// console.log('3 - Mảng cũ sau khi thêm một giá trị số mới vào cuối: ', array);
 
 	// Lọc
 	let trueArr = [];
@@ -48,7 +46,7 @@ function insertNumber(array, num) {
 	}
 
 	console.log(
-		'4 - Mảng mới sau khi loại bỏ toàn bộ giá trị không phải là số hoặc là NaN : ',
+		' -  Mảng mới sau khi loại bỏ toàn bộ giá trị không phải là số hoặc là NaN : ',
 		trueArr
 	);
 

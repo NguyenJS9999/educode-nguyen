@@ -17,16 +17,15 @@ findMinMaxAverage([-3, 7, -8, 11, 0]); // Output: {max: 11, maxIndex: 3,min: -8,
  */
 
 function findMinMaxAverage(arr) {
-	console.log('------------------------');
-	let max = arr[0];
-	let maxIndex = 0;
-	let min = arr[0];
-	let minIndex = 0;
+	console.log('**********************************************************');
+	console.log('Mảng ban đầu cần xử lý: ', arr)
+	let maxNum = arr[0], maxIndex = 0;
+	let minNum = arr[0], minIndex = 0;
 	let arrPrimeNumber = [];
 
 	if (!Array.isArray(arr) || arr.length === 0) {
 		return {
-			max: null,
+			maxNum: null,
 			maxIndex: null,
 			min: null,
 			minIndex: null,
@@ -35,40 +34,44 @@ function findMinMaxAverage(arr) {
 	}
 
 	for (let i = 0; i < arr.length; i++) {
-		if (arr[i] > max) {
-			max = arr[i];
+		if (arr[i] > maxNum) {
+			maxNum = arr[i]; // Chạy từ đầu nếu có số nào lớn hơn thì gán
 			maxIndex = i;
+			console.log('------------------------------------------------------------------------');
+
 		}
 
-		if (arr[i] < min) {
-			min = arr[i];
+		if (arr[i] < minNum) {
+			minNum = arr[i]; // Chạy từ đầu nếu có số nào nhỏ hơn thì gán
 			minIndex = i;
 		}
 
 		if (checkPrimeNumber(arr[i])) {
-			arrPrimeNumber.push(arr[i]);
+			arrPrimeNumber.push(arr[i]); // Mảng số nguyên tố
 		}
 	}
 
-	let sum = 0;
+	let sumPrimeNumber = 0;
 	let numPrimeAverage = null;
 
-	console.log('arrPrimeNumber', arrPrimeNumber);
+	console.log('Mảng các số nguyên tố tìm được', arrPrimeNumber);
 
 	if (arrPrimeNumber.length > 0) {
 		for (let i = 0; i < arrPrimeNumber.length; i++) {
-			sum += arrPrimeNumber[i];
+			sumPrimeNumber += arrPrimeNumber[i];
 		}
-		numPrimeAverage = (sum / arrPrimeNumber.length).toFixed(2);
+		numPrimeAverage = sumPrimeNumber / arrPrimeNumber.length;
+		numPrimeAverage = parseFloat(numPrimeAverage.toFixed(2));
+		// numPrimeAverage = Math.round( ( numPrimeAverage * 4 ) / 4 )
 	}
 
-	console.log('sum', sum);
-	console.log('numPrimeAverage', numPrimeAverage);
+	// console.log('sumPrimeNumber', sumPrimeNumber);
+	// console.log('numPrimeAverage', numPrimeAverage);
 
 	return {
-		max: max,
+		max: maxNum,
 		maxIndex: maxIndex,
-		min: min,
+		min: minNum,
 		minIndex: minIndex,
 		primeAverage: numPrimeAverage
 	};

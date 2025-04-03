@@ -36,7 +36,7 @@ function filterEvenNumbers(arr) {
 
 		}
 		console.log(
-			`Mảng mới sau khi lọc lấy các số chẵn của một mảng ban đầu: ' [${evenNumberArr}]`
+			`Mảng mới sau khi lọc lấy các số chẵn : ' [${evenNumberArr}]`
 		);
 		console.log(`-------------------------------------------------------`);
 
@@ -45,7 +45,7 @@ function filterEvenNumbers(arr) {
 
 		return evenNumberArr;
 	} else {
-		resultElement1.innerHTML = `Đầu vào ko hợp lệ`;
+		resultElement2.innerHTML = `Đầu vào ko hợp lệ`;
 		return `Đầu vào ko hợp lệ`;
 	}
 }

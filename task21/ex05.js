@@ -20,8 +20,8 @@ insertNumber([5, 2, 8], NaN); // Output: [2, 5, 8]
 */
 
 function insertNumber(array, num) {
-	console.log('Đầu vào của mảng cần thêm: ', array);
-	console.log('In ra đầu vào muốn thêm vào mảng là 1 ký tự bất kì: ', num);
+	console.log('1 - Đầu vào của mảng cần thêm: ', array);
+	console.log('2 - Một ký tự bất kì muốn thêm vào mảng trên: ', num);
 	if (!Array.isArray(array)) {
 		console.log('Lỗi: Đầu vào phải là một mảng.');
 		return;
@@ -33,39 +33,39 @@ function insertNumber(array, num) {
 
 	// Thêm kí tự bất kì vào mảng
 	array.push(num);
+	console.log('3 - Mảng cũ sau khi thêm một giá trị số mới vào cuối: ', array);
 
 	// Lọc
 	let trueArr = [];
 	for (let i = 0; i < array.length; i++) {
-
 		if (
-			array[i] &&
-			typeof array[i] !== "string" &&
-			typeof array[i] === "number" &&
+			typeof array[i] !== 'string' &&
+			typeof array[i] === 'number' &&
 			!isNaN(array[i])
 		) {
-			// console.log("typeof array[i]: ",typeof array[i])
 			trueArr.push(array[i]);
 		}
-
 	}
 
+	console.log(
+		'4 - Mảng mới sau khi loại bỏ toàn bộ giá trị không phải là số hoặc là NaN : ',
+		trueArr
+	);
+
+	for (let i = 1; i < trueArr.length; i++) {
+        for (let j = i; j > 0; j--) {
+            if (trueArr[j] < trueArr[j - 1]) {
+                let template = trueArr[j];
+                trueArr[j] = trueArr[j - 1];
+                trueArr[j - 1] = template;
+            } else {
+                break;
+            }
+        }
+    }
 
 
-
-	for (let i = 0; i < trueArr.length - 1; i++) {
-		for (let j = 0; j < trueArr.length - 1; j++) {
-			if (trueArr[j] > trueArr[j + 1]) {
-				trueArr[j] = trueArr[j] + trueArr[j + 1];
-				trueArr[j + 1] = trueArr[j] - trueArr[j + 1];
-				trueArr[j] = trueArr[j + 1] - trueArr[j];
-			}
-		}
-	}
-
-	console.log(`=> Mảng sau khi lọc
-		sắp xếp theo thứ tự tăng dần và loại bỏ toàn bộ giá trị không phải là số hoặc là NaN :`, trueArr);
-
+	console.log(`==> Mảng sau khi lọc sắp xếp theo thứ tự tăng dần :`, trueArr);
 	console.log(
 		`------------------------------------------------------------------------`
 	);
